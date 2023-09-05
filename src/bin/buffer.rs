@@ -17,10 +17,15 @@ fn main(){
     //integer
     let vec1 = vec![1,3,5]; //the sum is 9
     let buffer1 = Buffer{member:vec1};
+    assert_eq!(buffer1.sum(),9);
     println!("The sum of vec1 is {}",buffer1.sum());
     
     //float
     let vec2 = vec![1.2,3.3,5.5,6.6]; //the sum is 16.6
     let buffer2 = Buffer{member:vec2};
+    assert_eq!(buffer2.sum(),16.6);
     println!("The sum of vec2 is {}",buffer2.sum());
+
+    
+    
 }

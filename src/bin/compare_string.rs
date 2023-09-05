@@ -23,7 +23,12 @@ fn compare_string(x:&str,y:&str)->bool{
 fn main(){
     let string1 = "abc";  //for test
     let string2 = "abcd";
-    println!("The result of comparing {} and {} is: {}",string1,string2,compare_string(string1, string2));
+    let result1 = compare_string(string1, string2);
+    assert_eq!(result1,false);
+    println!("The result of comparing {} and {} is: {}",string1,string2,result1);
+    
     let string3 = "mnt";
-    println!("The result of comparing {} and {} is: {}",string3,string1,compare_string(string3, string1));
+    let result2 = compare_string(string3, string1);
+    assert_eq!(result2,true);
+    println!("The result of comparing {} and {} is: {}",string3,string1,result2);
 }
